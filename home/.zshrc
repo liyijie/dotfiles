@@ -67,6 +67,13 @@ export KOPS_MFA_ARN="arn:aws:iam::459931222334:mfa/dpetersen"
 bindkey -v
 # Enable Ctrl-v v to edit current command in vim mode
 bindkey -M vicmd "^V" edit-command-line
+bindkey '^P' up-history
+bindkey '^N' down-history
+# bindkey '^f' history-complete-older
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
 # Don't wait half a second to get out of insert mode
 export KEYTIMEOUT=1
 
