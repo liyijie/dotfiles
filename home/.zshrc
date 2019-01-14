@@ -43,13 +43,13 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rbenv kubectl kops helm history-substring-search zsh-syntax-highlighting zsh-autosuggestions terraform)
+plugins=(git rbenv kubectl kops helm history-substring-search zsh-vim-mode zsh-syntax-highlighting zsh-autosuggestions terraform)
 
 source $ZSH/oh-my-zsh.sh
 
-# load every file in ~/.zsh.d formatted as "SXX_some_task", XX being a number for script ordering              
-for zshrc_snipplet in ~/.zsh.d/S[0-9][0-9]*[^~] ; do           
-        source $zshrc_snipplet         
+# load every file in ~/.zsh.d formatted as "SXX_some_task", XX being a number for script ordering
+for zshrc_snipplet in ~/.zsh.d/S[0-9][0-9]*[^~] ; do
+        source $zshrc_snipplet
 done
 
 if [[ -z $TMUX ]]; then
@@ -66,14 +66,9 @@ export KOPS_MFA_ARN="arn:aws:iam::459931222334:mfa/dpetersen"
 # Vi mode
 bindkey -v
 # Enable Ctrl-v v to edit current command in vim mode
-bindkey -M vicmd "^V" edit-command-line
-bindkey '^P' up-history
-bindkey '^N' down-history
-# bindkey '^f' history-complete-older
-bindkey '^?' backward-delete-char
-bindkey '^h' backward-delete-char
-bindkey '^w' backward-kill-word
-bindkey '^r' history-incremental-search-backward
+bindkey -M vicmd "^M" edit-command-line
+
+bind-key -n C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
 # Don't wait half a second to get out of insert mode
 export KEYTIMEOUT=1
 

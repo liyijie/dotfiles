@@ -8,7 +8,7 @@
   email = liyijie825@gmail.com
 [core]
   excludesfile = ~/.gitignore
-  editor = /usr/local/bin/vim
+  editor = /usr/bin/nvim
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path = 
