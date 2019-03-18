@@ -43,7 +43,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rbenv kubectl kops helm history-substring-search zsh-syntax-highlighting zsh-autosuggestions zsh-vim-mode terraform)
+plugins=(git kubectl kops helm history-substring-search zsh-syntax-highlighting zsh-autosuggestions zsh-vim-mode terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,6 +85,7 @@ setopt no_share_history
 # source: http://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
 stty -ixon
 
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
