@@ -43,7 +43,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rbenv kubectl kops helm history-substring-search zsh-vim-mode zsh-syntax-highlighting zsh-autosuggestions terraform)
+plugins=(git rbenv kubectl kops helm history-substring-search zsh-syntax-highlighting zsh-autosuggestions zsh-vim-mode terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,7 +68,11 @@ bindkey -v
 # Enable Ctrl-v v to edit current command in vim mode
 bindkey -M vicmd "^M" edit-command-line
 
-bind-key -n C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+# bind-key -n C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+# bindkey '^?' backward-delete-char
+# bindkey '^h' backward-delete-char
+# bindkey '^w' backward-kill-word
+# bindkey '^r' history-incremental-search-backward
 # Don't wait half a second to get out of insert mode
 export KEYTIMEOUT=1
 
