@@ -16,3 +16,6 @@
 [submodule "home/.zsh_custom/plugins/zsh-autosuggestions"]
 	path = home/.zsh_custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "home/.zsh_custom/plugins/zsh-vim-mode"]
+	path = home/.zsh_custom/plugins/zsh-vim-mode
+	url = https://github.com/softmoth/zsh-vim-mode
